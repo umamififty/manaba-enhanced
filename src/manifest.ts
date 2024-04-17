@@ -38,18 +38,18 @@ const generateManifest = () => {
       },
       content_scripts: [
         {
-          matches: ["https://manaba.tsukuba.ac.jp/*"],
+          matches: ["https://ct.ritsumei.ac.jp/ct"],
           run_at: "document_start",
           js: ["contentScript/main.js"],
         },
         {
-          matches: ["https://manaba.tsukuba.ac.jp/*"],
-          include_globs: ["https://manaba.tsukuba.ac.jp/ct/course_*_report_*"],
+          matches: ["https://ct.ritsumei.ac.jp/ct"],
+          include_globs: ["https://ct.ritsumei.ac.jp/ct/course_*_report_*"],
           js: ["contentScript/reportTemplate.js"],
         },
         {
-          matches: ["https://manaba.tsukuba.ac.jp/*"],
-          include_globs: ["https://manaba.tsukuba.ac.jp/ct/course_*_grade"],
+          matches: ["https://ct.ritsumei.ac.jp/ct/"],
+          include_globs: ["https://ct.ritsumei.ac.jp/ct/course_*_grade"],
           js: ["contentScript/showRelativeGradesPosition.js"],
         },
       ],
